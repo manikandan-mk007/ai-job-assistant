@@ -1,0 +1,72 @@
+# =========================
+#  ENV & SECRETS
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+#  PYTHON BACKEND
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python build
+build/
+dist/
+*.egg-info/
+
+# =========================
+#  FASTAPI / SERVER
+# =========================
+*.log
+uvicorn.log
+
+# =========================
+#  MODEL CACHE (IMPORTANT)
+# =========================
+# sentence-transformers / huggingface cache
+.cache/
+.huggingface/
+**/models/
+
+# =========================
+#  OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+#  EXTENSION (SAFE CLEAN)
+# =========================
+# (Keep your extension code, ignore only build junk if any)
+node_modules/
+dist/
+build/
+
+# =========================
+#  IDE / EDITOR
+# =========================
+.vscode/
+.idea/
+
+# =========================
+#  DATABASE (IMPORTANT)
+# =========================
+backend/*.db
+backend/*.sqlite3
+
+# =========================
+#  OPTIONAL (if logs generated)
+# =========================
+logs/
+*.log

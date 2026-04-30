@@ -1,0 +1,4 @@
+JOB_STATUS_SAVED = "saved"
+JOB_STATUS_APPLIED = "applied"
+JOB_STATUS_INTERVIEW = "interview"
+JOB_STATUS_REJECTED = "rejected"

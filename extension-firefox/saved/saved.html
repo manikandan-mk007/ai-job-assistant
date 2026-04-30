@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Saved Jobs | AI Job Assistant</title>
+
+  <link rel="stylesheet" href="saved.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI Job Assistant</p>
+        <h1>Saved Jobs</h1>
+        <p class="subtitle">Track your saved jobs, match scores, and application status.</p>
+      </div>
+
+      <button id="settingsBtn" class="btn secondary">Settings</button>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span id="totalJobs">0</span>
+        <p>Total</p>
+      </div>
+      <div class="stat-card">
+        <span id="averageScore">0%</span>
+        <p>Average Score</p>
+      </div>
+      <div class="stat-card">
+        <span id="strongMatches">0</span>
+        <p>Strong Matches</p>
+      </div>
+      <div class="stat-card">
+        <span id="appliedJobs">0</span>
+        <p>Applied</p>
+      </div>
+    </section>
+
+    <section class="toolbar card">
+      <input id="searchInput" class="input" type="text" placeholder="Search title, company, skills..." />
+
+      <select id="statusFilter" class="input select">
+        <option value="">All Status</option>
+        <option value="saved">Saved</option>
+        <option value="applied">Applied</option>
+        <option value="interview">Interview</option>
+        <option value="rejected">Rejected</option>
+      </select>
+
+      <select id="scoreFilter" class="input select">
+        <option value="">All Scores</option>
+        <option value="strong">Strong Match 75%+</option>
+        <option value="moderate">Moderate 55% - 74%</option>
+        <option value="low">Low Below 55%</option>
+      </select>
+
+      <button id="refreshBtn" class="btn primary">Refresh</button>
+    </section>
+
+    <section id="messageBox" class="message-box hidden"></section>
+
+    <section id="jobsList" class="jobs-list"></section>
+  </main>
+
+  <script src="saved.js"></script>
+</body>
+</html>

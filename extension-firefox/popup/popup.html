@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Job Assistant</title>
+
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI Job Assistant</p>
+        <h1>Smart Job Match</h1>
+        <p class="subtitle">Powered by semantic resume analysis</p>
+      </div>
+
+      <button id="settingsBtn" class="icon-btn" title="Settings">⚙</button>
+    </header>
+
+    <section id="authBox" class="card">
+      <h2>Account</h2>
+
+      <input id="nameInput" class="input" type="text" placeholder="Name for signup" />
+      <input id="emailInput" class="input" type="email" placeholder="Email" />
+      <input id="passwordInput" class="input" type="password" placeholder="Password" />
+
+      <div class="button-row">
+        <button id="loginBtn" class="btn primary">Login</button>
+        <button id="registerBtn" class="btn secondary">Signup</button>
+      </div>
+
+      <p id="authMessage" class="message"></p>
+    </section>
+
+    <section id="userBox" class="card hidden">
+      <div class="user-line">
+        <div>
+          <p class="small-label">Logged in as</p>
+          <h2 id="userName">User</h2>
+          <p id="userEmail" class="muted"></p>
+        </div>
+
+        <button id="logoutBtn" class="btn danger">Logout</button>
+      </div>
+    </section>
+
+    <section class="card actions">
+      <button id="analyzeBtn" class="btn primary full">Analyze Current Job</button>
+
+      <div class="grid-actions">
+        <button id="profileBtn" class="btn secondary">Profile</button>
+        <button id="savedBtn" class="btn secondary">Saved Jobs</button>
+        <button id="resumeBtn" class="btn secondary">Resume</button>
+      </div>
+    </section>
+
+    <section id="loadingBox" class="card hidden">
+      <div class="loader"></div>
+      <p>Analyzing job with AI model...</p>
+    </section>
+
+    <section id="errorBox" class="error-box hidden"></section>
+
+    <section id="resultBox" class="hidden">
+      <div class="score-card">
+        <div>
+          <p class="small-label">Match Score</p>
+          <h2 id="finalScore">0%</h2>
+          <p id="recommendation" class="recommendation">Recommendation</p>
+        </div>
+
+        <div class="score-ring">
+          <span id="scoreRingText">0</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Match Summary</h2>
+        <p id="matchSummary" class="summary-text"></p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric">
+          <span id="semanticScore">0%</span>
+          <p>Semantic</p>
+        </div>
+        <div class="metric">
+          <span id="skillScore">0%</span>
+          <p>Skills</p>
+        </div>
+        <div class="metric">
+          <span id="resumeScore">0%</span>
+          <p>Resume</p>
+        </div>
+        <div class="metric">
+          <span id="projectScore">0%</span>
+          <p>Projects</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">
+          <h2>Matched Skills</h2>
+          <span id="matchedCount" class="badge">0</span>
+        </div>
+        <div id="matchedSkills" class="chips"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">
+          <h2>Missing Skills</h2>
+          <span id="missingCount" class="badge warn">0</span>
+        </div>
+        <div id="missingSkills" class="chips warn-chips"></div>
+      </div>
+
+      <div class="card">
+        <h2>Priority Skills</h2>
+        <div id="prioritySkills" class="chips priority-chips"></div>
+      </div>
+
+      <div class="card">
+        <h2>Suggested Keywords</h2>
+        <div id="suggestedKeywords" class="chips"></div>
+      </div>
+
+      <div class="card">
+        <h2>Strengths</h2>
+        <ul id="strengthsList" class="clean-list"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Weaknesses</h2>
+        <ul id="weaknessesList" class="clean-list"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Resume Improvements</h2>
+        <ul id="resumeTipsList" class="clean-list"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Learning Plan</h2>
+        <ul id="learningPlanList" class="clean-list"></ul>
+      </div>
+
+      <div class="button-row sticky-actions">
+        <button id="saveJobBtn" class="btn primary">Save Job</button>
+        <button id="coverLetterBtn" class="btn secondary">Cover Letter</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

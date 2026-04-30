@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Job Assistant Settings</title>
+
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI Job Assistant</p>
+        <h1>Profile & Settings</h1>
+        <p class="subtitle">Manage your backend URL and career profile.</p>
+      </div>
+
+      <button id="savedJobsBtn" class="btn secondary">Saved Jobs</button>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Backend Settings</h2>
+
+        <label>API Base URL</label>
+        <input id="apiBaseInput" class="input" type="text" placeholder="http://127.0.0.1:8000/api/v1" />
+
+        <button id="saveSettingsBtn" class="btn primary full">Save Settings</button>
+        <p id="settingsMessage" class="message"></p>
+      </div>
+
+      <div class="card">
+        <h2>Account</h2>
+
+        <div id="accountBox">
+          <p class="muted">Checking login...</p>
+        </div>
+
+        <button id="logoutBtn" class="btn danger full">Logout</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Career Profile</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Target Role</label>
+          <input id="targetRoleInput" class="input" type="text" placeholder="Python Full Stack Developer" />
+        </div>
+
+        <div>
+          <label>Skills</label>
+          <input id="skillsInput" class="input" type="text" placeholder="Python, Django, React, MySQL, REST API" />
+        </div>
+      </div>
+
+      <label>Professional Summary</label>
+      <textarea id="summaryInput" class="textarea" placeholder="Short profile summary"></textarea>
+
+      <label>Education</label>
+      <textarea id="educationInput" class="textarea" placeholder="Education details"></textarea>
+
+      <label>Projects</label>
+      <textarea id="projectsInput" class="textarea big" placeholder="Project details"></textarea>
+
+      <label>Resume Text</label>
+      <textarea id="resumeTextInput" class="textarea big" placeholder="Paste resume text or upload resume from Resume page"></textarea>
+
+      <div class="button-row">
+        <button id="loadProfileBtn" class="btn secondary">Reload Profile</button>
+        <button id="saveProfileBtn" class="btn primary">Save Profile</button>
+      </div>
+
+      <p id="profileMessage" class="message"></p>
+    </section>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Resume Upload | AI Job Assistant</title>
+
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI Job Assistant</p>
+        <h1>Resume Upload</h1>
+        <p class="subtitle">Upload PDF or DOCX resume and sync extracted text to your profile.</p>
+      </div>
+
+      <button id="settingsBtn" class="btn secondary">Settings</button>
+    </section>
+
+    <section class="card">
+      <h2>Upload Resume</h2>
+
+      <div class="upload-box">
+        <input id="resumeFileInput" type="file" accept=".pdf,.docx" />
+        <p>Supported files: PDF, DOCX</p>
+      </div>
+
+      <div class="button-row">
+        <button id="uploadBtn" class="btn primary">Upload & Parse</button>
+        <button id="clearBtn" class="btn secondary">Clear</button>
+      </div>
+
+      <p id="messageBox" class="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Extracted Resume Text</h2>
+      <textarea id="resumeText" class="textarea" placeholder="Extracted resume text will appear here..."></textarea>
+
+      <div class="button-row">
+        <button id="copyBtn" class="btn secondary">Copy Text</button>
+        <button id="openProfileBtn" class="btn primary">Open Profile</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="resume.js"></script>
+</body>
+</html>

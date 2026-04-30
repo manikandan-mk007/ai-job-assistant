@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cover Letter | AI Job Assistant</title>
+
+  <link rel="stylesheet" href="cover-letter.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI Job Assistant</p>
+        <h1>Cover Letter Generator</h1>
+        <p class="subtitle">Generate a professional cover letter from saved job analysis.</p>
+      </div>
+
+      <button id="savedJobsBtn" class="btn secondary">Saved Jobs</button>
+    </section>
+
+    <section class="card">
+      <h2>Generated Cover Letter</h2>
+
+      <textarea id="coverLetterText" class="textarea" placeholder="Generated cover letter will appear here..."></textarea>
+
+      <div class="button-row">
+        <button id="generateBtn" class="btn primary">Generate</button>
+        <button id="copyBtn" class="btn secondary">Copy</button>
+        <button id="clearBtn" class="btn secondary">Clear</button>
+      </div>
+
+      <p id="messageBox" class="message"></p>
+    </section>
+  </main>
+
+  <script src="cover-letter.js"></script>
+</body>
+</html>

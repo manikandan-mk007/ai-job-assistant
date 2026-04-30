@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "AI Job Assistant",
+  "version": "4.0.0",
+  "description": "Analyze LinkedIn, Indeed, Naukri, and Glassdoor jobs using AI semantic matching, resume insights, and job tracking.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "https://www.linkedin.com/*",
+    "https://*.indeed.com/*",
+    "https://www.naukri.com/*",
+    "https://www.glassdoor.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "browser_action": {
+    "default_title": "AI Job Assistant",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.linkedin.com/jobs/*",
+        "*://*.indeed.com/*",
+        "*://www.naukri.com/*",
+        "*://www.glassdoor.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ai-job-assistant@thangamanikandan.dev",
+      "strict_min_version": "140.0"
+    }
+  }
+}
